@@ -1,0 +1,35 @@
+Pasos para correr el proyecto en tu computadora 
+->activar entorno virtual 
+python -m venv venv 
+    activar entorno virtual = 
+        cd venv/Script 
+            activate
+(es inmportante tener un entorno virtual para el trabajo) -> (venv) asi tiene que salirte y siempre tener en cuenta que este asi!
+
+
+->instalar dependecias
+pip install requirements
+
+->tener pgadmin en tu computadora para no usar docker compose 
+    una ves teniendo pgadmin 
+    en windows se crea por defecto 
+    ir al proyecto Raiz_ecomerce 
+        settings 
+            DATA_BASE
+
+                DATABASES = {
+    'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'ex2',   #nombre de tu base de datos 
+            'USER': 'postgres',
+            'PASSWORD': 'adminn',  #contraseña de tu pgadmin 
+            'HOST': 'localhost',
+            'PORT': '5432',  #siempre levanta en este puerto asi que no tiene que ver problema
+        }
+}  (modificar esto )
+
+-> create un .gitignore 
+    venv
+    __pycache__/
+    *.pyc
+(es importante el git ignore para no subir tu entorno virutal a git normalmente peso arto)
